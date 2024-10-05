@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://historedge.com/
+
+# Sitemaps
+Sitemap: https://historedge.com/sitemap.xml
