@@ -89,6 +89,14 @@ const Profile: React.FC<Props> = ({ className }) => {
                   フロントエンドエンジニア
                 </td>
               </tr>
+              <tr>
+                <td className="h-[70px] align-top pr-5">2024/1～</td>
+                <td className="align-top">
+                  <span className="font-bold">はちのへヒストリア </span>
+                  <br className="m:hidden" />
+                  エンジニア
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

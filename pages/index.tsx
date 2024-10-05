@@ -31,6 +31,14 @@ export default function Home() {
             </h2>
           </div>
           <div className="flex flex-wrap justify-center gap-7 w-[75vw] m-auto">
+            <a href="https://historia8.org/" target="_blank">
+              <ImgCard
+                labelStyle={{ color: "#575757" }}
+                label="【Web制作】はちのへヒストリア"
+                imgUrl="/hachinohe-historia.png"
+                alt="はちのへヒストリアのロゴ"
+              />
+            </a>
             <a href="https://it-feels-it.com/" target="_blank">
               <ImgCard
                 labelStyle={{ color: "#575757" }}

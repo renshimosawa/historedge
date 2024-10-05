@@ -32,7 +32,7 @@ const ImgItem: React.FC<Props> = ({
         />
       </div>
       <p
-        className="inline-block absolute bottom-[10px] left-[10px] m-0 px-1 bg-white backdrop-blur-sm"
+        className="inline-block absolute bottom-[10px] left-[10px] m-0 px-1 bg-white/80 backdrop-blur-sm"
         style={labelStyle}
       >
         {label}
