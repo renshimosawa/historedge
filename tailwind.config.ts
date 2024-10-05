@@ -9,9 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        p1: "#525252",
+        p2: "#707070",
       },
+    },
+    fontFamily: {
+      josefin: ["Josefin Sans"],
+    },
+    screens: {
+      xs: { max: "330px" },
+      s: { max: "480px" },
+      m: { max: "600px" },
+      l: { max: "1029px" },
+      xl: { min: "1030px" },
+      xxl: { min: "1440px" },
     },
   },
   plugins: [],
