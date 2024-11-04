@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 import MapboxLanguage from "@mapbox/mapbox-gl-language";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { originalDomain } from "@/components/map/OverlayMap";
 
 const Index = () => {
   mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN ?? "";
@@ -18,7 +19,7 @@ const Index = () => {
     }) => {
       const map = new mapboxgl.Map({
         container: mapContainer.current,
-        center: [141.4897, 40.513103], // 東京駅を初期値点として表示（緯度、経度を指定）
+        center: [141.4897, 40.513103], 
         zoom: 16,
         style: "mapbox://styles/mapbox/streets-v12",
       });
@@ -30,6 +31,19 @@ const Index = () => {
       map.on("load", () => {
         setMap(map);
         map.resize();
+         // 画像オーバーレイのソースを追加
+         map.addSource("overlay-source", {
+          type: "vector",
+          url: `mapbox://renshimosawa.8spxhkdp`, // ここにオーバーレイ用のMapbox URLを設定
+          // bounds:[40.52,40.4942,141.513105,141.4666]
+        });
+
+        // 画像オーバーレイのレイヤーを追加
+        map.addLayer({
+          id: "overlay-layer",
+          source: "overlay-source",
+          type: "fill",
+        });
       });
     };
 
